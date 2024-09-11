@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import { open as openEmbed } from "@play-ai/web-embed";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const webEmbedId = "mljyNpZSPXvHQN2nllPz";
+const webEmbedId = "afWbn9JNnrN6vPWvqeqmB";
 
 export default function PlayAI() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const events = [
     {
       name: "voice-response",
@@ -16,8 +19,10 @@ export default function PlayAI() {
   };
 
   useEffect(() => {
+    console.log("Mic Loading start for PlayAI component...")
     openEmbed(webEmbedId, { events, onEvent });
-  }, []);
+    console.log("Mic loading ended for PlayAI component...")
+  }, [location, navigate]);
 
   // Inline styles for container, content, and title
   const containerStyle = {
