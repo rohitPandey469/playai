@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PlayAI from "./components/PlayAI";
 import Navbar from "./components/Navbar"; // Import the Navbar
@@ -6,6 +6,7 @@ import MickeyVoice from "./components/MickeyVoice";
 import PeterGriffinVoice from "./components/PeterGriffinVoice";
 
 const App = () => {
+
   return (
     <Router>
       <Navbar />
@@ -19,4 +20,3 @@ const App = () => {
 };
 
 export default App;
-

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./Navbar.css"
+import "./Navbar.css";
 
 const Navbar = () => {
   const location = useLocation();
@@ -32,21 +32,25 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav
+      className="navbar"
+    >
       {/* Toggle button for mobile view */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="navbar-toggle"
-      >
+      <button onClick={() => setIsOpen(!isOpen)} className="navbar-toggle">
         ☰
       </button>
-      <ul className={`navbar-menu ${isOpen ? 'open' : ''}`}>
+      <ul className={`navbar-menu ${isOpen ? "open" : ""}`}>
         <li>
           <Link
             to="/"
             style={{
               ...baseLinkStyle,
               ...(isActive("/") ? activeLinkStyle : inactiveLinkStyle),
+            }}
+            onClick={() => {
+              setTimeout(()=>{
+                window.location.reload()
+              },1500)
             }}
           >
             PlayAI
@@ -61,6 +65,11 @@ const Navbar = () => {
                 ? activeLinkStyle
                 : inactiveLinkStyle),
             }}
+            onClick={() => {
+              setTimeout(()=>{
+                window.location.reload()
+              },1500)
+            }}
           >
             Mickey
           </Link>
@@ -73,6 +82,11 @@ const Navbar = () => {
               ...(isActive("/peter-voice")
                 ? activeLinkStyle
                 : inactiveLinkStyle),
+            }}
+            onClick={() => {
+              setTimeout(()=>{
+                window.location.reload()
+              },1500)
             }}
           >
             PeterGriffin
