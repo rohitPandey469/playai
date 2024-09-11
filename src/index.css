@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #003366, #000000); /* A gradient from deep blue to black */
+    color: #ffffff; /* White text color for contrast */
+  }
+  
+
+ul,
+ol {
+  list-style: none; /* Removes bullet points and numbers from lists */
+}
+
+a {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherits color from parent element */
+}
+
+/* Optional: Add a rule to ensure all elements have consistent box-sizing */
+*::before,
+*::after {
+  box-sizing: inherit;
+}

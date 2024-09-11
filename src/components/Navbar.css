@@ -1,0 +1,74 @@
+/* General Navbar Styles */
+.navbar {
+  background-color: #1f2937;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.navbar-toggle {
+  display: none; /* Hidden by default, shown on mobile */
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  z-index: 5000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: row;
+  transition: max-height 0.3s ease-out;
+}
+
+.navbar-menu.open {
+  display: flex; /* Show menu items when open */
+}
+
+.navbar-menu li {
+  text-decoration: none;
+}
+
+.navbar-menu a {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: white;
+  background-color: #4b5563; /* Dark gray on hover */
+}
+
+/* Media Query for Mobile and Tablet */
+@media (max-width: 768px) {
+  .navbar-menu {
+    padding: 2rem 0 2rem .5rem;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1f2937;
+    border-top: 1px solid #2d3748;
+    display: none; /* Hidden by default, shown when menu is open */
+  }
+
+  .navbar-menu.open {
+    display: flex;
+    max-height: 500px; /* Adjust as needed */
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
