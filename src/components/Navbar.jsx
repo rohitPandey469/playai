@@ -50,7 +50,7 @@ const Navbar = () => {
             onClick={() => {
               setTimeout(()=>{
                 window.location.reload()
-              },1500)
+              },16)
             }}
           >
             PlayAI
@@ -68,7 +68,7 @@ const Navbar = () => {
             onClick={() => {
               setTimeout(()=>{
                 window.location.reload()
-              },1500)
+              },16)
             }}
           >
             Mickey
@@ -86,7 +86,7 @@ const Navbar = () => {
             onClick={() => {
               setTimeout(()=>{
                 window.location.reload()
-              },1500)
+              },16)
             }}
           >
             PeterGriffin
