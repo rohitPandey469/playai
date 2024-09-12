@@ -53,7 +53,7 @@ const Navbar = () => {
               },16)
             }}
           >
-            PlayAI
+            Candidate
           </Link>
         </li>
         <li>

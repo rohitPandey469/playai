@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { open as openEmbed } from "@play-ai/web-embed";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const webEmbedId = "afWbn9JNnrN6vPWvqeqmB";
+const webEmbedId = "yA3sf6kuN75Kx7-6fbNaK";
 
 export default function PlayAI() {
   const location = useLocation();
